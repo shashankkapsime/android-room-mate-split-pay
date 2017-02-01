@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_spend_money"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.roommatesplitpay.activities.SpendMoneyActivity">
+
+    <TextView
+        android:id="@+id/tvSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etMoneyFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSelectDate"
+        android:hint="For what you are spending money?"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etMoneyFor"
+        android:layout_marginTop="10dp"
+        android:hint="@string/amount"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvDivideWithRoomies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAmount"
+        android:layout_marginTop="10dp"
+        android:text="@string/divide_with_roomies"
+        android:textColor="@color/colorAccent" />
+
+    <RadioGroup
+        android:id="@+id/rgRoomies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDivideWithRoomies"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/yes" />
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/no" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvNames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgRoomies"
+        android:layout_marginTop="10dp"
+        android:text="Vinay, Abhishek, Nikhil, Nitesh and Me" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNames"
+        android:layout_marginTop="10dp"
+        android:text="@string/submit" />
+</RelativeLayout>

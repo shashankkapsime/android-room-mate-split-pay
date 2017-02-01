@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RoomMateSplitPay</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="auth_failed">Authentication Failed</string>
+    <string name="loading">Loading...</string>
+    <string name="app_code">tb383</string>
+    <string name="share">Share</string>
+    <string name="title_receive">Receive</string>
+    <string name="title_send">Send</string>
+    <string name="msg_no_deep_link">No deep link received.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="amount">Amount</string>
+    <string name="divide_with_roomies">Divide with roomies?</string>
+    <string name="submit">Submit</string>
+    <string name="work_in_progress">Work in progress</string>
+    <string name="plz_enter_for_what_you_are_spending">Please enter for what you are spending money</string>
+    <string name="plz_enter_amount">Please enter the amount</string>
+</resources>
