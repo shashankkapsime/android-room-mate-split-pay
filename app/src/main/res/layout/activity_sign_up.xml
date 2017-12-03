@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.roommatesplitpay.activities.SignUpActivity">
+    tools:context="com.splitpay.activities.SignUpActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,18 +12,39 @@
         android:layout_margin="20dp">
 
         <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords" />
+
+        <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/etFullName"
+            android:layout_marginTop="20dp"
             android:hint="Email"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etEmail"
+            android:layout_marginTop="20dp"
+            android:hint="Phone Number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPhone"
             android:layout_marginTop="20dp"
             android:hint="Password"
             android:imeOptions="actionDone"

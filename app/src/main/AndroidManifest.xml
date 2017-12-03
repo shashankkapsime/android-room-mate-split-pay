@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.roommatesplitpay">
+    package="com.splitpay">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name="com.splitpay.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,16 +20,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.DashboardActivity"
+            android:name="com.splitpay.activities.DashboardActivity"
             android:label="@string/title_activity_dashboard"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activities.LoginActivity"
+            android:name="com.splitpay.activities.LoginActivity"
             android:label="Login"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SignUpActivity"
+            android:name="com.splitpay.activities.SignUpActivity"
             android:label="@string/title_activity_sign_up">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -46,9 +46,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SpendMoneyActivity"
+            android:name="com.splitpay.activities.SpendMoneyActivity"
             android:label="Spend Money" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name="com.splitpay.activities.MainActivity">
 
             <!--
             <intent-filter>
@@ -60,7 +60,7 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".activities.RoomiesListActivity"></activity>
+        <activity android:name="com.splitpay.activities.RoomiesListActivity"></activity>
     </application>
 
 </manifest>
