@@ -74,6 +74,7 @@ public class AddMemberFragment extends BaseFragment {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CommonUtils.hideSoftKeyboard(getActivity());
                 doOperation(etPhone.getText().toString());
             }
         });
@@ -148,13 +149,18 @@ public class AddMemberFragment extends BaseFragment {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
+                        if (getActivity() == null)
+                            return;
                         hideProgressDialog();
                         CommonUtils.showToast(mContext, "Member added successfully");
+                        etPhone.setText("");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
+                        if (getActivity() == null)
+                            return;
                         hideProgressDialog();
                         CommonUtils.showToast(mContext, "Member not added : " + e.getMessage());
                     }

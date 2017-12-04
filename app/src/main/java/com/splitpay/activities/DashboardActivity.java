@@ -10,19 +10,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.splitpay.AppConstants;
 import com.splitpay.BaseActivity;
 import com.splitpay.R;
 import com.splitpay.User;
@@ -49,31 +42,6 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
         mFireStore = FirebaseFirestore.getInstance();
         setIDs();
         setListeners();
-
-        mFireStore.collection(AppConstants.USER_FRIEND_LIST)
-                .document(SplitPaySession.getInstance(this).getUserID())
-                .collection(AppConstants.USER_FRIENDS)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (DocumentSnapshot document : task.getResult()) {
-                                User user = document.toObject(User.class);
-                                mFriendsList.add(user);
-                            }
-                            Log.d(TAG, "size >>> " + mFriendsList.size());
-                        } else {
-                            Log.d(TAG, "get failed with ", task.getException());
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                    }
-                });
     }
 
     @Override

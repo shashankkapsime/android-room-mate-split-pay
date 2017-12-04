@@ -60,7 +60,6 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name="com.splitpay.activities.RoomiesListActivity"></activity>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.splitpay.activities.RoomiesListActivity">
+    tools:context="com.splitpay.activities.FragmentFriendList">
 
     <TextView
         android:id="@+id/tvSelectRoomies"
@@ -42,9 +42,9 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvRoomies"
-        android:visibility="gone"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rgRoomies" />
+        android:layout_below="@+id/rgRoomies"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
 </RelativeLayout>
